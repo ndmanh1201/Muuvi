@@ -1,5 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 @file:Suppress("DSL_SCOPE_VIOLATION")
+
 buildscript {
     repositories {
         google()
@@ -14,4 +15,7 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.ktlint) apply false
 }
+
+apply(plugin = "org.jlleitschuh.gradle.ktlint")

@@ -2,6 +2,17 @@ plugins {
     `kotlin-dsl`
 }
 
+java {
+    sourceCompatibility = org.gradle.api.JavaVersion.VERSION_17
+    targetCompatibility = org.gradle.api.JavaVersion.VERSION_17
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+}
+
 dependencies {
     testImplementation("junit:junit:4.13.2")
     compileOnly(libs.android.gradlePlugin)
