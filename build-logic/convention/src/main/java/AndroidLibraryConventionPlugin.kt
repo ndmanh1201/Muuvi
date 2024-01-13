@@ -9,6 +9,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("com.android.library")
+                apply("com.app.mova.library.compose")
                 apply("org.jetbrains.kotlin.android")
             }
 
