@@ -28,6 +28,8 @@ android {
 dependencies {
 
     implementation(project(":feature:splash"))
+    implementation(project(":feature:onboarding"))
+    implementation(project(":core:ui"))
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)

@@ -18,3 +18,4 @@ rootProject.name = "Mova"
 include(":app")
 include(":core:ui")
 include(":feature:splash")
+include(":feature:onboarding")

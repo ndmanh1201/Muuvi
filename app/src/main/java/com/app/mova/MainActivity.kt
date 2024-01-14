@@ -5,7 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.rememberNavController
 import com.app.mova.navigation.AppNavigation
-import com.app.mova.ui.theme.MovaTheme
+import com.app.mova.core.ui.theme.MovaTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

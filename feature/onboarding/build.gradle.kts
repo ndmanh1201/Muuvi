@@ -1,13 +1,15 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    id("com.app.mova.library")
+    id("com.app.mova.features")
 }
 
 android {
-    namespace = "com.app.mova.core.ui"
+    namespace = "com.app.mova.feature.onboarding"
 }
 
 dependencies {
+
+    implementation(project(":core:ui"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -1,20 +1,28 @@
-package com.app.mova.ui.theme
+package com.app.mova.core.ui.theme
 
 import android.app.Activity
 import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.app.mova.ui.theme.AppBackgroundDark
+import com.app.mova.ui.theme.AppBackgroundLight
+import com.app.mova.ui.theme.Pink40
+import com.app.mova.ui.theme.Pink80
+import com.app.mova.ui.theme.PrimaryColor
+import com.app.mova.ui.theme.SecondaryColor
+import com.app.mova.ui.theme.Typography
 
 private val DarkColorScheme = darkColorScheme(
     primary = PrimaryColor,
@@ -40,9 +48,11 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 @Composable
 fun MovaTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    typography: Typography = Typography,
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
@@ -67,7 +77,7 @@ fun MovaTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = typography,
         content = content
     )
 }

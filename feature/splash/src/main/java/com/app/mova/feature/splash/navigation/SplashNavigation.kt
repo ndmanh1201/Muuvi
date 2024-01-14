@@ -6,8 +6,10 @@ import com.app.mova.feature.splash.SplashScreen
 
 const val ROUTE_SPLASH_SCREEN = "splash"
 
-fun NavGraphBuilder.splashScreen() {
+fun NavGraphBuilder.splashScreen(
+    onSplashFinished: () -> Unit,
+) {
     composable(route = ROUTE_SPLASH_SCREEN) {
-        SplashScreen()
+        SplashScreen(onSplashFinished = onSplashFinished)
     }
 }
