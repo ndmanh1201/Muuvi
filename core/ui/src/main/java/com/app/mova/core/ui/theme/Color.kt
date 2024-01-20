@@ -38,3 +38,8 @@ val Grey300 = Color(0xFFE0E0E0)
 val Grey200 = Color(0xFFEEEEEE)
 val Grey100 = Color(0xFFF5F5F5)
 val Grey50 = Color(0xFFFAFAFA)
+
+//transparent
+val TransparentRed = Color(0x14E21221)
+
+val DisabledButtonColor = Color(0xFF4F4853)

@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.navOptions
-import com.app.mova.feature.onboarding.navigation.ROUTE_ONBOARDING_GRAPH
+import com.app.mova.feature.auth.navigation.authNavigationGraph
+import com.app.mova.feature.auth.navigation.navigateToAuthNavigationGraph
 import com.app.mova.feature.onboarding.navigation.navigateToOnboardingGraph
 import com.app.mova.feature.onboarding.navigation.onboardingGraph
 import com.app.mova.feature.splash.navigation.ROUTE_SPLASH_SCREEN
@@ -22,6 +23,12 @@ fun AppNavigation(navController: NavHostController) {
                 }
             )
         })
-        onboardingGraph(navController = navController)
+        onboardingGraph(
+            navController = navController,
+            onPasswordSignInClick = navController::navigateToAuthNavigationGraph,
+        )
+        authNavigationGraph(
+            navController = navController,
+        )
     }
 }

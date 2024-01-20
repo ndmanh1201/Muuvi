@@ -14,6 +14,7 @@ const val ROUTE_GET_STARTED = "get-started"
 
 fun NavGraphBuilder.onboardingGraph(
     navController: NavHostController,
+    onPasswordSignInClick: () -> Unit,
 ) {
     navigation(startDestination = ROUTE_WELCOME_SCREEN, route = ROUTE_ONBOARDING_GRAPH) {
         welcomeScreen(
@@ -23,7 +24,7 @@ fun NavGraphBuilder.onboardingGraph(
             onBackClick = navController::popBackStack,
             onFacebookClick = {},
             onGoogleClick = {},
-            onPasswordSignInClick = {},
+            onPasswordSignInClick = onPasswordSignInClick,
             onSignUpClick = {},
         )
     }

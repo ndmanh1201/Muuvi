@@ -42,14 +42,16 @@ fun OutlinedButtonWithHeadingIcon(
             contentDescription = null,
             tint = Color.Unspecified,
         )
-        Spacer(modifier = Modifier.width(12.dp))
-        Text(
-            text = title,
-            color = Grey900,
-            fontFamily = fontFamily,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 16.sp,
-        )
+        if (title.isNotEmpty()) {
+            Spacer(modifier = Modifier.width(12.dp))
+            Text(
+                text = title,
+                color = Grey900,
+                fontFamily = fontFamily,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 16.sp,
+            )
+        }
     }
 }
 

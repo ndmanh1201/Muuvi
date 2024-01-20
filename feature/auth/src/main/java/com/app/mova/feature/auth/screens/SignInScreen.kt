@@ -1,13 +1,16 @@
-package com.app.mova.feature.onboarding.screens
+package com.app.mova.feature.auth.screens
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
@@ -19,15 +22,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.mova.core.ui.component.ButtonPrimaryColor
+import com.app.mova.core.ui.R
+import com.app.mova.core.ui.component.InputTextField
+import com.app.mova.core.ui.component.MovaButton
+import com.app.mova.core.ui.component.MovaCheckBox
 import com.app.mova.core.ui.component.OutlinedButtonWithHeadingIcon
-import com.app.mova.feature.onboarding.R
+import com.app.mova.feature.auth.model.SignInUiState
+import com.app.mova.ui.theme.DisabledButtonColor
 import com.app.mova.ui.theme.Grey500
 import com.app.mova.ui.theme.Grey700
 import com.app.mova.ui.theme.Grey900
@@ -35,18 +43,19 @@ import com.app.mova.ui.theme.PrimaryColor
 import com.app.mova.ui.theme.fontFamily
 
 @Composable
-fun GetStartedScreen(
+fun SignInScreen(
     modifier: Modifier = Modifier,
+    uiState: SignInUiState,
     onBackClick: () -> Unit,
+    onEmailChange: (String) -> Unit,
+    onPasswordChange: (String) -> Unit,
     onFacebookClick: () -> Unit,
     onGoogleClick: () -> Unit,
-    onPasswordSignInClick: () -> Unit,
     onSignUpClick: () -> Unit,
+    onCheckedChange: (Boolean) -> Unit,
 ) {
     Column(
-        modifier = modifier
-            .fillMaxSize()
-            .padding(24.dp),
+        modifier = modifier.padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(modifier = Modifier.fillMaxWidth()) {
@@ -56,35 +65,50 @@ fun GetStartedScreen(
                 contentDescription = null,
             )
         }
-        Image(
-            modifier = Modifier.padding(vertical = 30.dp),
-            painter = painterResource(id = R.drawable.image_get_started),
+        Icon(
+            modifier = Modifier
+                .size(120.dp)
+                .padding(vertical = 24.dp),
+            imageVector = ImageVector.vectorResource(id = R.drawable.logo),
             contentDescription = null,
+            tint = Color.Unspecified,
         )
         Text(
-            text = stringResource(id = R.string.let_get_started),
+            text = stringResource(id = R.string.login_to_your_account),
             fontFamily = fontFamily,
             fontWeight = FontWeight.Bold,
             color = Grey900,
-            fontSize = 28.sp
+            fontSize = 28.sp,
         )
-        OutlinedButtonWithHeadingIcon(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 30.dp, bottom = 16.dp),
-            onClick = onFacebookClick,
-            resourceId = com.app.mova.core.ui.R.drawable.icon_facebook,
-            title = stringResource(id = R.string.facebook_login),
+        Spacer(modifier = Modifier.height(24.dp))
+        InputTextField(
+            value = uiState.email,
+            leadingIconResId = R.drawable.icon_email,
+            hint = stringResource(id = R.string.hint_email),
+            onValueChange = onEmailChange,
         )
-
-        OutlinedButtonWithHeadingIcon(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 24.dp),
-            onClick = onGoogleClick,
-            resourceId = com.app.mova.core.ui.R.drawable.icon_google,
-            title = stringResource(id = R.string.google_login),
+        Spacer(modifier = Modifier.height(24.dp))
+        InputTextField(
+            value = uiState.password,
+            leadingIconResId = R.drawable.icon_lock,
+            hint = stringResource(id = R.string.hint_password),
+            onValueChange = onPasswordChange,
+            trailingIconEnable = true,
         )
+        Spacer(modifier = Modifier.height(20.dp))
+        MovaCheckBox(
+            checked = uiState.isRememberChecked,
+            description = stringResource(id = R.string.remember_me),
+            onCheckedChange = onCheckedChange,
+        )
+        Spacer(modifier = Modifier.height(20.dp))
+        MovaButton(
+            modifier = Modifier.fillMaxWidth(),
+            title = stringResource(id = R.string.sign_up),
+            color = DisabledButtonColor,
+            onClick = onSignUpClick,
+        )
+        Spacer(modifier = Modifier.height(20.dp))
         Row(verticalAlignment = Alignment.CenterVertically) {
             Divider(
                 modifier = Modifier
@@ -94,7 +118,7 @@ fun GetStartedScreen(
             )
             Text(
                 modifier = Modifier.padding(horizontal = 16.dp),
-                text = stringResource(id = R.string.or),
+                text = stringResource(id = R.string.or_continue_with),
                 fontFamily = fontFamily,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 18.sp,
@@ -107,19 +131,29 @@ fun GetStartedScreen(
                 thickness = 0.5.dp,
             )
         }
-        ButtonPrimaryColor(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 24.dp),
-            onClick = onPasswordSignInClick,
-            title = stringResource(id = R.string.sign_in_with_password)
-        )
+        Spacer(modifier = Modifier.height(20.dp))
         Row(
-            modifier = Modifier.padding(top = 30.dp),
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center,
+        ) {
+            OutlinedButtonWithHeadingIcon(
+                onClick = onFacebookClick,
+                resourceId = R.drawable.icon_facebook,
+                title = "",
+            )
+            Spacer(modifier = Modifier.width(20.dp))
+            OutlinedButtonWithHeadingIcon(
+                onClick = onGoogleClick,
+                resourceId = R.drawable.icon_google,
+                title = "",
+            )
+        }
+        Row(
+            modifier = Modifier.padding(top = 40.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
-                text = stringResource(id = R.string.dont_have_an_account),
+                text = stringResource(id = R.string.already_have_an_account),
                 fontFamily = fontFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 14.sp,
@@ -132,9 +166,9 @@ fun GetStartedScreen(
                     containerColor = Color.Transparent,
                 ),
                 contentPadding = PaddingValues(vertical = 0.dp, horizontal = 8.dp),
-                ) {
+            ) {
                 Text(
-                    text = stringResource(id = R.string.sign_up),
+                    text = stringResource(id = R.string.sign_in),
                     fontFamily = fontFamily,
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
@@ -147,12 +181,15 @@ fun GetStartedScreen(
 
 @Preview(showBackground = true)
 @Composable
-fun GetStartedScreenPreview() {
-    GetStartedScreen(
+fun SignInScreenPreview() {
+    SignInScreen(
+        uiState = SignInUiState(),
         onBackClick = {},
+        onEmailChange = {},
+        onPasswordChange = {},
+        onSignUpClick = {},
         onFacebookClick = {},
         onGoogleClick = {},
-        onPasswordSignInClick = {},
-        onSignUpClick = {},
+        onCheckedChange = {},
     )
 }
