@@ -1,6 +1,7 @@
+@file:Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("com.app.mova.application")
-    id("com.app.mova.hilt")
+    alias(libs.plugins.muuvi.android.application)
+    alias(libs.plugins.muuvi.android.hilt)
 }
 
 android {

@@ -74,3 +74,10 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint"}
+
+#Plugins define by this project
+muuvi-android-application = { id = "com.app.mova.application", version = "unspecified"}
+muuvi-android-library = { id = "com.app.mova.library", version = "unspecified"}
+muuvi-android-hilt = { id = "com.app.mova.hilt", version = "unspecified"}
+muuvi-android-library-compose = { id = "com.app.mova.library.compose", version = "unspecified"}
+muuvi-android-features = { id = "com.app.mova.features", version = "unspecified"}
