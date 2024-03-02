@@ -1,4 +1,4 @@
-package com.app.mova.ui.theme
+package com.app.muuvi.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

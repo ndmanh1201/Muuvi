@@ -1,4 +1,4 @@
-package com.app.mova.feature.onboarding
+package com.app.muuvi.feature.onboarding
 
 import org.junit.Test
 

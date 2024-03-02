@@ -1,8 +1,8 @@
-package com.app.mova.feature.auth.viewmodel
+package com.app.muuvi.feature.auth.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.app.mova.feature.auth.model.SignInUiState
+import com.app.muuvi.feature.auth.model.SignInUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

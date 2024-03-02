@@ -1,4 +1,4 @@
-package com.app.mova.core.ui.theme
+package com.app.muuvi.core.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -16,13 +16,13 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import com.app.mova.ui.theme.AppBackgroundDark
-import com.app.mova.ui.theme.AppBackgroundLight
-import com.app.mova.ui.theme.Pink40
-import com.app.mova.ui.theme.Pink80
-import com.app.mova.ui.theme.PrimaryColor
-import com.app.mova.ui.theme.SecondaryColor
-import com.app.mova.ui.theme.Typography
+import com.app.muuvi.ui.theme.AppBackgroundDark
+import com.app.muuvi.ui.theme.AppBackgroundLight
+import com.app.muuvi.ui.theme.Pink40
+import com.app.muuvi.ui.theme.Pink80
+import com.app.muuvi.ui.theme.PrimaryColor
+import com.app.muuvi.ui.theme.SecondaryColor
+import com.app.muuvi.ui.theme.Typography
 
 private val DarkColorScheme = darkColorScheme(
     primary = PrimaryColor,
@@ -50,7 +50,7 @@ private val LightColorScheme = lightColorScheme(
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 @Composable
-fun MovaTheme(
+fun muuviTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     typography: Typography = Typography,
     // Dynamic color is available on Android 12+

@@ -1,4 +1,4 @@
-package com.app.mova.core.ui.component
+package com.app.muuvi.core.ui.component
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material3.Button
@@ -12,13 +12,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.mova.core.ui.R
-import com.app.mova.core.ui.theme.MovaTheme
-import com.app.mova.ui.theme.DisabledButtonColor
-import com.app.mova.ui.theme.fontFamily
+import com.app.muuvi.core.ui.R
+import com.app.muuvi.core.ui.theme.muuviTheme
+import com.app.muuvi.ui.theme.DisabledButtonColor
+import com.app.muuvi.ui.theme.fontFamily
 
 @Composable
-fun MovaButton(
+fun muuviButton(
     modifier: Modifier = Modifier,
     title: String,
     color: Color,
@@ -43,9 +43,9 @@ fun MovaButton(
 
 @Preview(showBackground = true)
 @Composable
-fun MovaButtonPreview() {
-    MovaTheme {
-        MovaButton(
+fun muuviButtonPreview() {
+    muuviTheme {
+        muuviButton(
             onClick = {},
             title = stringResource(id = R.string.sign_up),
             color = DisabledButtonColor,

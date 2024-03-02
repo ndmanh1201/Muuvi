@@ -1,4 +1,4 @@
-package com.app.mova.feature.auth
+package com.app.muuvi.feature.auth
 
 import org.junit.Test
 

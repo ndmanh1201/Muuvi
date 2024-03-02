@@ -9,7 +9,7 @@ import org.gradle.kotlin.dsl.getByType
 class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply("com.app.mova.library")
+            pluginManager.apply("com.app.muuvi.library")
             extensions.getByType<LibraryExtension>().apply {
                 buildFeatures.compose = true
 

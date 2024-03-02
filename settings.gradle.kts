@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Mova"
+rootProject.name = "muuvi"
 include(":app")
 include(":core:ui")
 include(":feature:splash")

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.app.mova.core.ui"
+    namespace = "com.app.muuvi.core.ui"
 }
 
 dependencies {

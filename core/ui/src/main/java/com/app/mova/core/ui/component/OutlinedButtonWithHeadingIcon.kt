@@ -1,4 +1,4 @@
-package com.app.mova.core.ui.component
+package com.app.muuvi.core.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.BorderStroke
@@ -18,10 +18,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.mova.core.ui.R
-import com.app.mova.ui.theme.Grey200
-import com.app.mova.ui.theme.Grey900
-import com.app.mova.ui.theme.fontFamily
+import com.app.muuvi.core.ui.R
+import com.app.muuvi.ui.theme.Grey200
+import com.app.muuvi.ui.theme.Grey900
+import com.app.muuvi.ui.theme.fontFamily
 
 @Composable
 fun OutlinedButtonWithHeadingIcon(

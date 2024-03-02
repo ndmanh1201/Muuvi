@@ -1,4 +1,4 @@
-package com.app.mova.feature.auth.screens
+package com.app.muuvi.feature.auth.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -29,18 +29,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.mova.core.ui.R
-import com.app.mova.core.ui.component.InputTextField
-import com.app.mova.core.ui.component.MovaButton
-import com.app.mova.core.ui.component.MovaCheckBox
-import com.app.mova.core.ui.component.OutlinedButtonWithHeadingIcon
-import com.app.mova.feature.auth.model.SignInUiState
-import com.app.mova.ui.theme.DisabledButtonColor
-import com.app.mova.ui.theme.Grey500
-import com.app.mova.ui.theme.Grey700
-import com.app.mova.ui.theme.Grey900
-import com.app.mova.ui.theme.PrimaryColor
-import com.app.mova.ui.theme.fontFamily
+import com.app.muuvi.core.ui.R
+import com.app.muuvi.core.ui.component.InputTextField
+import com.app.muuvi.core.ui.component.muuviButton
+import com.app.muuvi.core.ui.component.muuviCheckBox
+import com.app.muuvi.core.ui.component.OutlinedButtonWithHeadingIcon
+import com.app.muuvi.feature.auth.model.SignInUiState
+import com.app.muuvi.ui.theme.DisabledButtonColor
+import com.app.muuvi.ui.theme.Grey500
+import com.app.muuvi.ui.theme.Grey700
+import com.app.muuvi.ui.theme.Grey900
+import com.app.muuvi.ui.theme.PrimaryColor
+import com.app.muuvi.ui.theme.fontFamily
 
 @Composable
 fun SignInScreen(
@@ -96,13 +96,13 @@ fun SignInScreen(
             trailingIconEnable = true,
         )
         Spacer(modifier = Modifier.height(20.dp))
-        MovaCheckBox(
+        muuviCheckBox(
             checked = uiState.isRememberChecked,
             description = stringResource(id = R.string.remember_me),
             onCheckedChange = onCheckedChange,
         )
         Spacer(modifier = Modifier.height(20.dp))
-        MovaButton(
+        muuviButton(
             modifier = Modifier.fillMaxWidth(),
             title = stringResource(id = R.string.sign_up),
             color = DisabledButtonColor,

@@ -1,4 +1,4 @@
-package com.app.mova.feature.auth.navigation
+package com.app.muuvi.feature.auth.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -9,8 +9,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.app.mova.feature.auth.screens.SignInScreen
-import com.app.mova.feature.auth.viewmodel.SignInViewModel
+import com.app.muuvi.feature.auth.screens.SignInScreen
+import com.app.muuvi.feature.auth.viewmodel.SignInViewModel
 
 const val ROUTE_AUTH_NAVIGATION_GRAPH = "auth-navigation-graph"
 const val ROUTE_SIGN_IN_SCREEN = "sign-in"

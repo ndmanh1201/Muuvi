@@ -1,4 +1,4 @@
-package com.app.mova.feature.onboarding.screens
+package com.app.muuvi.feature.onboarding.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -25,14 +25,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.mova.core.ui.component.ButtonPrimaryColor
-import com.app.mova.core.ui.component.OutlinedButtonWithHeadingIcon
-import com.app.mova.feature.onboarding.R
-import com.app.mova.ui.theme.Grey500
-import com.app.mova.ui.theme.Grey700
-import com.app.mova.ui.theme.Grey900
-import com.app.mova.ui.theme.PrimaryColor
-import com.app.mova.ui.theme.fontFamily
+import com.app.muuvi.core.ui.component.ButtonPrimaryColor
+import com.app.muuvi.core.ui.component.OutlinedButtonWithHeadingIcon
+import com.app.muuvi.feature.onboarding.R
+import com.app.muuvi.ui.theme.Grey500
+import com.app.muuvi.ui.theme.Grey700
+import com.app.muuvi.ui.theme.Grey900
+import com.app.muuvi.ui.theme.PrimaryColor
+import com.app.muuvi.ui.theme.fontFamily
 
 @Composable
 fun GetStartedScreen(
@@ -73,7 +73,7 @@ fun GetStartedScreen(
                 .fillMaxWidth()
                 .padding(top = 30.dp, bottom = 16.dp),
             onClick = onFacebookClick,
-            resourceId = com.app.mova.core.ui.R.drawable.icon_facebook,
+            resourceId = com.app.muuvi.core.ui.R.drawable.icon_facebook,
             title = stringResource(id = R.string.facebook_login),
         )
 
@@ -82,7 +82,7 @@ fun GetStartedScreen(
                 .fillMaxWidth()
                 .padding(bottom = 24.dp),
             onClick = onGoogleClick,
-            resourceId = com.app.mova.core.ui.R.drawable.icon_google,
+            resourceId = com.app.muuvi.core.ui.R.drawable.icon_google,
             title = stringResource(id = R.string.google_login),
         )
         Row(verticalAlignment = Alignment.CenterVertically) {

@@ -1,4 +1,4 @@
-package com.app.mova
+package com.app.muuvi
 
 import org.junit.Test
 

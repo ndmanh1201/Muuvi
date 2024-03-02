@@ -1,12 +1,12 @@
-package com.app.mova.feature.onboarding.navigation
+package com.app.muuvi.feature.onboarding.navigation
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.app.mova.feature.onboarding.screens.GetStartedScreen
-import com.app.mova.feature.onboarding.screens.WelcomeScreen
+import com.app.muuvi.feature.onboarding.screens.GetStartedScreen
+import com.app.muuvi.feature.onboarding.screens.WelcomeScreen
 
 const val ROUTE_ONBOARDING_GRAPH = "onboarding"
 const val ROUTE_WELCOME_SCREEN = "welcome"

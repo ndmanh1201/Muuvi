@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.app.mova.feature.splash"
+    namespace = "com.app.muuvi.feature.splash"
 }
 
 dependencies {

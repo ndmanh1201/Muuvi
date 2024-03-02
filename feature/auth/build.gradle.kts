@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.app.mova.feature.auth"
+    namespace = "com.app.muuvi.feature.auth"
 }
 
 dependencies {

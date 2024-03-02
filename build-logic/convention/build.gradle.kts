@@ -23,23 +23,23 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidLibrary") {
-            id = "com.app.mova.library"
+            id = "com.app.muuvi.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidApplication") {
-            id = "com.app.mova.application"
+            id = "com.app.muuvi.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidHilt") {
-            id = "com.app.mova.hilt"
+            id = "com.app.muuvi.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "com.app.mova.library.compose"
+            id = "com.app.muuvi.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("androidFeatures") {
-            id = "com.app.mova.features"
+            id = "com.app.muuvi.features"
             implementationClass = "AndroidFeatureConventionPlugin"
         }
     }

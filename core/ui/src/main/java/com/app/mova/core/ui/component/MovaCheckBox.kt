@@ -1,4 +1,4 @@
-package com.app.mova.core.ui.component
+package com.app.muuvi.core.ui.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -13,12 +13,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import com.app.mova.core.ui.theme.MovaTheme
-import com.app.mova.ui.theme.PrimaryColor
-import com.app.mova.ui.theme.fontFamily
+import com.app.muuvi.core.ui.theme.muuviTheme
+import com.app.muuvi.ui.theme.PrimaryColor
+import com.app.muuvi.ui.theme.fontFamily
 
 @Composable
-fun MovaCheckBox(
+fun muuviCheckBox(
     modifier: Modifier = Modifier,
     checked: Boolean,
     description: String,
@@ -49,9 +49,9 @@ fun MovaCheckBox(
 
 @Preview(showBackground = true)
 @Composable
-fun MovaCheckBoxCheckedPreview() {
-    MovaTheme {
-        MovaCheckBox(
+fun muuviCheckBoxCheckedPreview() {
+    muuviTheme {
+        muuviCheckBox(
             checked = true,
             description = "Remember me",
             onCheckedChange = {},
@@ -61,9 +61,9 @@ fun MovaCheckBoxCheckedPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun MovaCheckBoxUnCheckedPreview() {
-    MovaTheme {
-        MovaCheckBox(
+fun muuviCheckBoxUnCheckedPreview() {
+    muuviTheme {
+        muuviCheckBox(
             checked = false,
             description = "Remember me",
             onCheckedChange = {},

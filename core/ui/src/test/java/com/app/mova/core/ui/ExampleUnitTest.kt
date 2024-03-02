@@ -1,4 +1,4 @@
-package com.app.mova.core.ui
+package com.app.muuvi.core.ui
 
 import org.junit.Test
 

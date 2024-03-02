@@ -1,4 +1,4 @@
-package com.app.mova.feature.onboarding.screens
+package com.app.muuvi.feature.onboarding.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -23,10 +23,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.app.mova.core.ui.component.ButtonPrimaryColor
-import com.app.mova.feature.onboarding.R
-import com.app.mova.ui.theme.Dark1
-import com.app.mova.ui.theme.fontFamily
+import com.app.muuvi.core.ui.component.ButtonPrimaryColor
+import com.app.muuvi.feature.onboarding.R
+import com.app.muuvi.ui.theme.Dark1
+import com.app.muuvi.ui.theme.fontFamily
 
 @Composable
 fun WelcomeScreen(

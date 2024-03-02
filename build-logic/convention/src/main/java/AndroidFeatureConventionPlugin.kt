@@ -8,8 +8,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
-                apply("com.app.mova.library")
-                apply("com.app.mova.hilt")
+                apply("com.app.muuvi.library")
+                apply("com.app.muuvi.hilt")
             }
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")

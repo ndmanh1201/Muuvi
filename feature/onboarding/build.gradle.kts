@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.app.mova.feature.onboarding"
+    namespace = "com.app.muuvi.feature.onboarding"
 }
 
 dependencies {

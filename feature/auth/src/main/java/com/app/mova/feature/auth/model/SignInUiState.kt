@@ -1,4 +1,4 @@
-package com.app.mova.feature.auth.model
+package com.app.muuvi.feature.auth.model
 
 data class SignInUiState(
     val email: String = "",

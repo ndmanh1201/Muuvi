@@ -1,4 +1,4 @@
-package com.app.mova.feature.splash
+package com.app.muuvi.feature.splash
 
 import org.junit.Test
 

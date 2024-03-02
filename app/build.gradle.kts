@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.app.mova"
+    namespace = "com.app.muuvi"
 
     buildTypes {
         release {
